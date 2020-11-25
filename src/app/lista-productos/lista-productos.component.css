@@ -3,21 +3,16 @@
     flex-direction: row;
 }
 
-.menos{
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
-}
-
-.mas{
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
-}
-
-.cantidad{
-    width: 70px;
-    border-radius: 0px !important;
-}
-
 .oferta{
     background-color: lightgreen;
+}
+
+button img{
+    margin: 0px!;
+    width: 30px;
+    height: 25px;
+}
+
+.compra{
+    padding: 3%;
 }

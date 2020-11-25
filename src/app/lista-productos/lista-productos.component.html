@@ -5,6 +5,7 @@
             <th scope="col">Nombre</th>
             <th scope="col">Precio</th>
             <th scope="col">Stock</th>
+            <th scope="col">Cantidad</th>
             <th scope="col">Compra</th>
         </tr>
     </thead>
@@ -19,10 +20,11 @@
                     <span class="badge badge-danger" *ngIf="producto.stock<=0">Agotado</span>
                 </h4>
             </td>
-            <td class="compra">
-                <button class="btn btn-primary menos" (click)="restar(producto)">-</button>
-                <input type="number" class="form-control cantidad" [(ngModel)]="producto.cantidad">
-                <button class="btn btn-primary mas" (click)="aumentar(producto)">+</button>
+            <td>
+                <app-input-compra [(cantidad)]="producto.cantidad" [max]="producto.stock" *ngIf="producto.stock>0" (maxReached)="maxReached($event)"></app-input-compra>
+            </td>
+            <td>
+                <button class="btn btn-primary compra" (click)="agregarAlCarrito(producto)" *ngIf="producto.stock>0"><img src="../../assets/images/shopping-cart.png" alt="cart.png"></button>
             </td>
         </tr>
     </tbody>

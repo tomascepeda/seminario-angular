@@ -9,7 +9,9 @@ import { AboutComponent } from './about/about.component';
 import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
 import { ListaProductosComponent } from './lista-productos/lista-productos.component';
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
+import { InputCompraComponent } from './input-compra/input-compra.component';
+import { CarritoComponent } from './carrito/carrito.component'
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { FormsModule } from '@angular/forms'
     AboutComponent,
     NavComponent,
     FooterComponent,
-    ListaProductosComponent
+    ListaProductosComponent,
+    InputCompraComponent,
+    CarritoComponent
   ],
   imports: [
     BrowserModule,

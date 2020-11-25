@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductosCartService } from '../productos-cart.service';
 import { Producto } from './Producto';
 
 @Component({
@@ -51,19 +52,21 @@ export class ListaProductosComponent implements OnInit {
     }
   ]
 
-  constructor() { }
+  constructor(private carrito: ProductosCartService) { }
 
   ngOnInit(): void {
   }
 
-  restar(producto: Producto) {
-    if (producto.cantidad > 0)
-      producto.cantidad--;
+  maxReached(max: boolean) {
+    alert("Alcanzo el maximo de unidades para este producto");
   }
 
-  aumentar(producto: Producto) {
-    if (producto.cantidad < producto.stock)
-      producto.cantidad++;
+  agregarAlCarrito(producto) {
+    if(producto.cantidad>0){
+      this.carrito.agregarAlCarrito(producto);
+      producto.stock -= producto.cantidad;
+      producto.cantidad = 0;
+    }
   }
 
 }

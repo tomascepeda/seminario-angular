@@ -25,6 +25,6 @@ td h4{
 }
 
 section table{
-    width: 95% !important;
     margin: 3% auto;
+    width: 95% !important;
 }
