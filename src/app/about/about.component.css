@@ -1,0 +1,15 @@
+.portada{
+    background: url("../../assets/images/bg-about.jpg");
+}
+
+.card{
+    margin: 0 auto;
+    margin-top: 3%;
+    width: 50% !important;
+}
+
+.card img{
+    height: 100px;
+    margin-left: 500px;
+    width: 80px !important;
+}
