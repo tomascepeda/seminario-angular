@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { CarritoComponent } from './carrito/carrito.component';
 import { Producto } from './lista-productos/Producto';
 
 @Injectable({
@@ -7,10 +8,10 @@ import { Producto } from './lista-productos/Producto';
 })
 export class ProductosCartService {
 
-  private _listaCompras : Producto[] = [];
+  private _listaCompras: Producto[] = [];
   listaCompras: BehaviorSubject<Producto[]> = new BehaviorSubject(this._listaCompras);
 
-  constructor() { }
+  constructor() {}
 
   agregarAlCarrito(producto: Producto) {
     let item: Producto = this._listaCompras.find((v1) => v1.nombre == producto.nombre);

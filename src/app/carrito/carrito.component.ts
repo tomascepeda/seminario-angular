@@ -8,6 +8,7 @@ import { ProductosCartService } from '../productos-cart.service';
   templateUrl: './carrito.component.html',
   styleUrls: ['./carrito.component.css']
 })
+
 export class CarritoComponent implements OnInit {
 
   listaCompras$: Observable<Producto[]>;
