@@ -1,3 +1,7 @@
 .portada{
-    background: url("../../assets/images/bg-catalogo.jpg");
+    background: url("https://i.ibb.co/P9kcyMq/bg-catalogo.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }

@@ -24,8 +24,8 @@
                 <app-input-compra [(cantidad)]="producto.cantidad" [max]="producto.stock" *ngIf="producto.stock>0" (maxReached)="maxReached($event)"></app-input-compra>
             </td>
             <td>
-                <button class="btn btn-primary compra" (click)="agregarAlCarrito(producto)" *ngIf="producto.stock>0"><img src="../../assets/images/shopping-cart.png" alt="cart.png"></button>
-            </td>
+                <button class="btn btn-primary compra" (click)="agregarAlCarrito(producto)" *ngIf="producto.stock>0"><img src="https://i.ibb.co/WHd5PPz/shopping-cart.png" alt="cart.png"></button>
+            </td>            
         </tr>
     </tbody>
 </table>
